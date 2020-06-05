@@ -1,0 +1,25 @@
+<section class="pokemon-list">
+    <h1>Pokemon route</h1>
+    <p>Total Pokemon available: {{model.count}}</p>
+
+    <p>List of available pokemon:</p>
+    <ul>
+        {{#each model.results as |result|}}
+<!--            <LinkTo @route="pokemon.pokemon-details" @model={{get-id-from-url result.url}}>{{result.name}}</LinkTo>-->
+            <p>{{get-id-from-url result.url}}</p>
+            <li>{{#link-to "pokemon.pokemon-details" (get-id-from-url result.url)}}{{result.name}}{{/link-to}}</li>
+        {{/each}}
+    </ul>
+
+    {{nav-bar
+            previousPage=(action "previousPage")
+            nextPage=(action "nextPage")
+            offset=offset
+            itemsPerPage=itemsPerPage
+            count=model.count
+    }}
+</section>
+{{outlet}}
+
+
+
