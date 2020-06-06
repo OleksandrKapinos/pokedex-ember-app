@@ -1,0 +1,9 @@
+<h2 class="center pokemon-list-title">List pokemon</h2>
+<ul class="pokemon-list-items">
+    {{#each @model.results as |result|}}
+        <li class="pokemon-item">{{#link-to "pokemon.pokemon-details" (get-id-from-url result.url)}}
+            <p class="circle-id center">{{get-id-from-url result.url}}</p>
+            <p class="center">{{result.name}}</p>
+        {{/link-to}}</li>
+    {{/each}}
+</ul>

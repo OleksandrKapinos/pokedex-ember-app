@@ -1,7 +1,30 @@
-name: {{model.name}} <br>
-height: {{model.height}} <br>
-weight: {{model.weight}} <br>
-<img src={{model.sprites.front_default}} alt="{{model.name}} front image">
-<img src={{model.sprites.front_shiny}} alt="{{model.name}} front image">
-<img src={{model.sprites.back_default}} alt="{{model.name}} back image">
-<img src={{model.sprites.back_shiny}} alt="{{model.name}} back image">
+<div class="pokemon-detail">
+    <section class=" card-container">
+        <h3 class="card-name">{{model.name}}</h3>
+        <img class="card-image"
+             src={{model.sprites.front_default}}
+             alt="{{model.name}} front image"
+        >
+
+        <div class="card-types">
+            {{#each model.types as |types|}}
+                <p class="card-item {{types.type.name}}">{{types.type.name}}</p>
+            {{/each}}
+        </div>
+        <div>
+            {{#each model.stats as |stats|}}
+                <p class="card-item">{{stats.stat.name}} {{stats.base_stat}}</p>
+            {{/each}}
+        </div>
+
+        <p class="card-item">height {{model.height}} </p>
+        <p class="card-item">weight: {{model.weight}} </p>
+
+        <div class="closeButton">
+            <LinkTo class="circle" @route="pokemon"></LinkTo>
+        </div>
+
+
+    </section>
+</div>
+<div class="background"></div>

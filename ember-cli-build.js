@@ -13,7 +13,7 @@ module.exports = function(defaults) {
   // If you need to use different assets in different
   // environments, specify an object as the first parameter. That
   // object's keys should be the environment name and the values
-  // should be the asset to use in that environment.
+  // should be the assets to use in that environment.
   //
   // If the library that you are including contains AMD or ES6
   // modules that you would like to import into your application

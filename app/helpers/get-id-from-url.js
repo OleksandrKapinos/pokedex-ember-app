@@ -1,8 +1,9 @@
 import { helper } from '@ember/component/helper';
 
-export default helper(function getIdFromUrl(params) {
+export function getIdFromUrl(params/*, hash*/) {
   const [url] = params;
   let pokemonId = url.replace('https://pokeapi.co/api/v2/pokemon/','').replace('/','');
-  console.log( 'helper pokemonId', pokemonId);
   return pokemonId;
-});
+}
+
+export default helper(getIdFromUrl);

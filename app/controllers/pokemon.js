@@ -8,16 +8,16 @@ export default Controller.extend({
 
     actions: {
         nextPage() {
-            this.transitionToRoute('pokemon', {
-                queryParams: {
+            this.transitionToRoute('pokemon', { 
+                queryParams: { 
                     offset: Number(this.offset) + this.itemsPerPage
                 }
             });
         },
-
+        
         previousPage() {
-            this.transitionToRoute('pokemon', {
-                queryParams: {
+            this.transitionToRoute('pokemon', { 
+                queryParams: { 
                     offset: Number(this.offset) - this.itemsPerPage
                 }
             });
