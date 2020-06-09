@@ -143,7 +143,6 @@ body {
     width: 7em;
     height: 7em;
 }
-
 .loader {
     margin: auto;
     font-size: 10px;
@@ -211,14 +210,12 @@ body {
     padding: 5px;
     text-transform: capitalize;
 }
-
 .pokemon-list-items {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     margin: 0 auto 10px auto;
 }
-
 .pokemon-list-title {
     margin: 15px;
     height: 20px;
